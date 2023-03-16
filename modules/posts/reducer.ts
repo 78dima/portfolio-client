@@ -9,6 +9,7 @@ const initialState: PostState = {
   loadingState: PostsLoadingState.NEVER,
 };
 export const postReducer = produce((draft: Draft<PostState>, action: PostActionUnion) => {
+  // eslint-disable-next-line default-case
   switch (action.type) {
     case PostsActionsType.SET_POSTS:
       draft.posts = action.payload;
