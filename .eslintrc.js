@@ -176,7 +176,7 @@ module.exports = {
   ignorePatterns: ['.eslintrc.js'],
   parser: '@typescript-eslint/parser',
   rules: {
-    
+    "import/no-unresolved": "off",
     'react/jsx-fragments': 'off',
     'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
