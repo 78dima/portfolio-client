@@ -1,0 +1,16 @@
+# static files
+static/*
+
+# testing
+coverage/*
+
+# production
+build/*
+dist/*
+.next/*
+bundles/*
+
+# misc
+.idea/*
+.vscode/*
+.documentation/*

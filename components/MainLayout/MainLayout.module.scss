@@ -1,0 +1,14 @@
+@import './styles/layout.scss';
+@import './styles/mixins.scss';
+
+
+#pageWrapper {
+  min-height: 100vh;
+  background: url('assets/page-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+}
+
+.container {
+  @include container;
+}

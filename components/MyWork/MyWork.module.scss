@@ -1,0 +1,10 @@
+.myWork {
+
+}
+
+.myWorkRow {
+  display: grid;
+  grid-template-areas: 'A B';
+  gap: 40px 20px;
+}
+

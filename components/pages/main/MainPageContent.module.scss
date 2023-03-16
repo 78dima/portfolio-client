@@ -1,0 +1,17 @@
+@import './styles/layout.scss';
+@import './styles/mixins.scss';
+
+.mainPageWrapper {
+  width: 57%;
+  right: 10%;
+  left: 35%;
+  position: relative;
+  min-height: 100vh;
+}
+.mainPageContainer {
+  @include container;
+}
+
+.mainPageSection {
+  border-bottom: 3px solid rgba(250, 250, 250, 0.25);
+}

@@ -1,0 +1,164 @@
+@import "variables";
+
+// Медиа запросы
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (min-width: $breakpoint-md-min) { @content; }
+  }
+
+  @else if $point == desktop {
+    @media (min-width: $breakpoint-lg-min) { @content; }
+  }
+
+  @else if $point == desktopLaptop {
+    @media (min-width: $breakpoint-xl-min) { @content; }
+  }
+
+  @else if $point == mobile {
+    @media (max-width: $breakpoint-sm-max) { @content; }
+  }
+
+  @else if $point == mobileTablet {
+    @media (max-width: $breakpoint-md-max) { @content; }
+  }
+
+  @else if $point == onlyDesktop {
+    @media
+    (min-width: $breakpoint-lg-min)
+    and (max-width: $breakpoint-lg-max) { @content; }
+  }
+
+  @else if $point == onlyTablet {
+    @media  (min-width: $breakpoint-md-min)
+    and (max-width: $breakpoint-md-max) { @content; }
+  }
+
+  @else if $point == excludeDesktopLaptop {
+    @media (max-width: $breakpoint-lg-max) { @content; }
+  }
+}
+
+//Псевдоэлементы before, after
+@mixin pseudo-element($content: '', $display: block, $pos: absolute) {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin currency($content: '', $visibility: visible, $pos: absolute) {
+  content: $content;
+  visibility: $visibility;
+  position: $pos;
+}
+
+//Сброс стилей списка
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin hideScrollbars {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin resetButtonStyles {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit from ancestor */
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+@mixin resetHeadingStyles {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+@mixin resetFocusOutline {
+  &:focus,
+  &:active,
+  &:visited,
+  &:visited:active {
+    outline: 0;
+    border: 0;
+  }
+}
+
+@mixin fullWidth {
+  width: 100vw;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+
+@mixin scrollbars($size, $border-radius, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border-radius: $border-radius;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+
+  // For firefox
+  & {
+    scrollbar-color: $foreground-color;
+  }
+}
+
+/**
+ * Миксин для указания отзывчивого блоку соотношение сторон при помощи padding-хака
+ */
+@mixin aspectRatio($width, $height) {
+  width: 100%;
+  padding-top: percentage($height / $width);
+}

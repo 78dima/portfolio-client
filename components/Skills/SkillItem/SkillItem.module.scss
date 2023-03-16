@@ -1,0 +1,45 @@
+.skillItem {
+  padding: 25px;
+  background-color: rgba(250, 250, 250, 0.1);
+  transition: all 0.5s;
+  &:hover {
+    background-color: rgba(250, 250, 250, 1);
+    .skillTitle {
+      color: #1e1e1e;
+    }
+    .skillText {
+      color: #1e1e1e;
+    }
+  }
+}
+
+.skillTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.25px;
+  margin: 0;
+  transition: all 0.5s;
+}
+.skillText {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.skillItemHead {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skillImage {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  img {
+    width: 100%;
+  }
+}

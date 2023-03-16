@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Graphik';
+  src:
+          url('../components/common/assets/fonts/GraphikLC-Regular.woff2') format('woff2'),
+          url('../components/common/assets/fonts/GraphikLC-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src:
+          url('../components/common/assets/fonts/GraphikLC-Medium.woff2') format('woff2'),
+          url('../components/common/assets/fonts/GraphikLC-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DINPro';
+  src:
+          url('../components/common/assets/fonts/DINPro-CondensedBold.woff2') format('woff2'),
+          url('../components/common/assets/fonts/DINPro-CondensedBold.woff') format('woff');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');

@@ -1,0 +1,28 @@
+.navigate {
+  ul {
+    padding-left: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    &:last-child a {
+      border-bottom: 2px solid #fff;
+    }
+  }
+  a {
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    transition: all 0.5s;
+    border-top: 2px solid #fff;
+    text-align: center;
+    &:hover {
+      background: #fff;
+      color: #8c363e;
+    }
+  }
+}

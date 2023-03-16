@@ -1,0 +1,37 @@
+.about {
+  margin-top: 60px;
+}
+
+.aboutImage {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.aboutImageWrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.aboutName {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.25px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.aboutInfo {
+  margin: 40px 0px 60px 0px;
+}
+
+.aboutSpec {
+  font-size: 13px;
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+}

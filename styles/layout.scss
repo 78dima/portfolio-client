@@ -1,0 +1,16 @@
+@mixin container {
+  margin: 0 auto;
+
+  @include breakpoint(mobileTablet) {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  @include breakpoint(onlyDesktop) {
+    width: 960px;
+  }
+
+  @include breakpoint(desktopLaptop) {
+    max-width: 1200px;
+  }
+}

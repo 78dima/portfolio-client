@@ -1,0 +1,41 @@
+@import './styles/mixins';
+.skills {
+
+}
+
+.skillsRow {
+  display: grid;
+  grid-template-areas: 'A B';
+  gap: 10px;
+}
+
+.skillsTabs {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  .myWorkTabsItem {
+    @include resetButtonStyles;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-right: 15px;
+    padding-bottom: 3px;
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom ease-in-out 0.5s;
+    cursor: pointer;
+    color: #fff;
+    &:hover {
+      color: #a43f49;
+      border-bottom: 2px solid #a43f49;
+    }
+    &.active {
+      color: #a43f49;
+      border-bottom: 2px solid #a43f49;
+    }
+    &.active {
+      color: #a43f49;
+    }
+  }
+}
