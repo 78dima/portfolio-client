@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Modal = ({ children }) => {
-  const [trigger, setTrigger] = useState();
-
   <div>
     <div>{children}</div>
   </div>;
