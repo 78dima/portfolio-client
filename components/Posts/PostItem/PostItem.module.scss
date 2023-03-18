@@ -1,3 +1,5 @@
+@import './styles/mixins.scss';
+
 .postItem {
   display: grid;
   grid-template-areas: 'image content';
@@ -11,12 +13,26 @@
   &:nth-child(2n) {
     grid-template-areas: 'content image';
   }
+
+  @include breakpoint(mobile) {
+    grid-template-areas: none;
+    &:nth-child(2n) {
+      grid-template-areas: none;
+    }
+  }
 }
 
 .postImageWrapper {
   grid-area: image;
+  
+  @include breakpoint(mobile) {
+    grid-area: auto;
+    margin: 0 auto;
+  }
+
   img {
     width: 100%;
+    max-width: 400px;
     border-radius: 5px;
     overflow: hidden
   }
@@ -25,6 +41,10 @@
 .postContentWrapper {
   padding: 30px 0;
   grid-area: content;
+
+  @include breakpoint(mobile) {
+    grid-area: auto;
+  }
 }
 
 .postContentTitle {

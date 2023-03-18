@@ -1,5 +1,10 @@
+@import './styles/mixins';
+
 .about {
   margin-top: 60px;
+  @include breakpoint(mobileTablet) {
+    margin-top: 40px;
+  }
 }
 
 .aboutImage {
@@ -27,6 +32,9 @@
 
 .aboutInfo {
   margin: 40px 0px 60px 0px;
+  @include breakpoint(mobileTablet) {
+    margin: 30px 0px 45px 0px;
+  }
 }
 
 .aboutSpec {

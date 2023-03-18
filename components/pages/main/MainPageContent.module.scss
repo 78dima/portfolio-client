@@ -7,6 +7,16 @@
   left: 35%;
   position: relative;
   min-height: 100vh;
+
+  @include breakpoint(mobileTablet) {
+    width: 100%;
+    position: static;
+  }
+
+  @include breakpoint(onlyDesktop) {
+    left: 30%;
+    width: 65%;
+  }
 }
 .mainPageContainer {
   @include container;

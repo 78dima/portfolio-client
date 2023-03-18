@@ -5,8 +5,12 @@
 
 .skillsRow {
   display: grid;
-  grid-template-areas: 'A B';
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .skillsTabs {

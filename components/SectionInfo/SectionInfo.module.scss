@@ -1,5 +1,11 @@
+@import './styles/mixins';
+
 .sectionInfo {
   padding: 80px 41px;
+  
+  @include breakpoint(mobile) {
+    padding: 50px 0;
+  }
 }
 
 .sectionInfoTitle {

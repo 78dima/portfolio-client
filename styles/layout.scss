@@ -6,9 +6,9 @@
     padding: 0 16px;
   }
 
-  @include breakpoint(onlyDesktop) {
-    width: 960px;
-  }
+  // @include breakpoint(onlyDesktop) {
+  //   width: 960px;
+  // }
 
   @include breakpoint(desktopLaptop) {
     max-width: 1200px;
