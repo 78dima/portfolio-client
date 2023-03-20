@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import SkillItem from '@/components/Skills/SkillItem/SkillItem';
 
@@ -163,6 +163,8 @@ const filters = [
 const Skills = () => {
   const [data, setData] = useState<Data[]>(dataa);
   const [activeFilter, setActiveFilter] = useState<Filters>();
+  const [showData, setShowData] = useState(false);
+  const visibleItems = showData ? data : data.slice(0, 6);
 
   const onFilterHandler = (filterName) => {
     setActiveFilter(filterName);
@@ -172,6 +174,10 @@ const Skills = () => {
     } else {
       setData(filteredData);
     }
+  };
+
+  const onShowEvent = () => {
+    setShowData(true);
   };
 
   useEffect(() => {
@@ -193,10 +199,17 @@ const Skills = () => {
         ))}
       </div>
       <div className={styles.skillsRow}>
-        {data.map((i) => (
+        {visibleItems.map((i) => (
           <SkillItem key={i.id} title={i.title} descr={i.descr} imageSrc={i.imageSrc} />
         ))}
       </div>
+      {!showData && (
+        <div className={styles.buttonWrapper}>
+          <button type="button" onClick={onShowEvent}>
+            Show more
+          </button>
+        </div>
+      )}
     </div>
   );
 };
