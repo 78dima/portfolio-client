@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 import styles from './MyWorkItem.module.scss';
@@ -11,7 +12,7 @@ interface Props {
 const MyWorkItem: React.FC<Props> = ({ title, link, imageSrc }) => (
   <div className={styles.myWorkItem}>
     <figure>
-      <img src={imageSrc} alt="" />
+      <Image src={imageSrc} alt="" layout="fill" objectFit="cover" />
       <figcaption>
         <h4>{title}</h4>
         <a href={link}>Link</a>

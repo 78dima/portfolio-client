@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import styles from './Navigate.module.scss';
 
@@ -6,16 +7,24 @@ const Navigate: React.FC = () => (
   <div className={styles.navigate}>
     <ul>
       <li>
-        <a href="#section-1">About me</a>
+        <Link activeClass={styles.active} to="about" spy smooth offset={-50} duration={500}>
+          About me
+        </Link>
       </li>
       <li>
-        <a href="#section-2">What Im good at</a>
+        <Link activeClass={styles.active} to="goods" spy smooth offset={-50} duration={500}>
+          What Im good at
+        </Link>
       </li>
       <li>
-        <a href="#section-3">My works</a>
+        <Link activeClass={styles.active} to="works" spy smooth offset={-50} duration={500}>
+          My works
+        </Link>
       </li>
       <li>
-        <a href="#section-4">Contact Me</a>
+        <Link activeClass={styles.active} to="contact" spy smooth offset={-50} duration={500}>
+          Contact Me
+        </Link>
       </li>
     </ul>
   </div>

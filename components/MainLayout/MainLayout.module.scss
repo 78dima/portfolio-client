@@ -4,7 +4,8 @@
 
 #pageWrapper {
   min-height: 100vh;
-  background: url('assets/page-bg.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(15, 14, 14, 0.7), rgba(0, 0, 0, 0.38)), url(assets/wallpep.jpg) no-repeat center center fixed;
+    background-size: auto, auto;
   background-size: cover;
   width: 100%;
 }

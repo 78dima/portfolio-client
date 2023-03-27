@@ -12,28 +12,28 @@ import styles from './MainPageContent.module.scss';
 const MainPageContent: React.FC = () => (
   <div className={styles.mainPageWrapper}>
     <div className={styles.mainPageContainer}>
-      <SectionLayout>
+      <SectionLayout id="about">
         <SectionInfo
           title="About Me"
           descr="Hello! My name is Dumitru Romanenco. I'm a web developer, let's get acquainted! My work experience:"
         />
         <Posts />
       </SectionLayout>
-      <SectionLayout>
+      <SectionLayout id="goods">
         <SectionInfo
           title="What I’m good at?"
           descr="Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor. Vestibulum congue leo et tellus aliquam, eu viverra nulla semper. Nullam eu faucibus diam. Donec eget massa ante."
         />
         <Skills />
       </SectionLayout>
-      <SectionLayout>
+      <SectionLayout id="works">
         <SectionInfo
           title="My Work"
           descr="Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit amet. Duis ac elit vulputate, lobortis arcu quis, vehicula mauris."
         />
         <MyWork />
       </SectionLayout>
-      <SectionLayout>
+      <SectionLayout id="contact">
         <SectionInfo
           title="Contact Me"
           descr="Fusce eget nibh nec justo interdum condimentum. Morbi justo ex, efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit."

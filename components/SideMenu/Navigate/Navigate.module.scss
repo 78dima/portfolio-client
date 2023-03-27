@@ -8,6 +8,10 @@
     &:last-child a {
       border-bottom: 2px solid #fff;
     }
+    & .active {
+      background: #fff;
+      color: #8c363e;
+    }
   }
   a {
     height: 70px;
@@ -20,6 +24,7 @@
     transition: all 0.5s;
     border-top: 2px solid #fff;
     text-align: center;
+    cursor: pointer;
     &:hover {
       background: #fff;
       color: #8c363e;

@@ -1,6 +1,9 @@
 
 
 .form {
+  ::placeholder {
+    color: #fff;
+  }
 
   .formRow {
     display: flex;

@@ -22,9 +22,6 @@ const PostItem: React.FC<Props> = ({ title, text, imageSrc, site, years }) => (
       </div>
       <div className={styles.postContentYears}>{years}</div>
       <div className={styles.postContentText}>{text}</div>
-      <div className={styles.postContentLink}>
-        <a href="/">Read More</a>
-      </div>
     </div>
   </div>
 );
