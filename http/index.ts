@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-export const API_URL = 'http://localhost:8000';
+import getConfig from '@/config/default';
+
+export const API_URL = getConfig().productionServer;
 
 const $api = axios.create({
   withCredentials: true,

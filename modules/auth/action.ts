@@ -1,6 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+import getConfig from '@/config/default';
 import $api from '@/http';
 
 export const authLogin = createAsyncThunk('auth/login', async (data: { email: string; password: string }, thunkAPI) => {
@@ -14,7 +15,7 @@ export const authLogin = createAsyncThunk('auth/login', async (data: { email: st
 
 export const checkAuth = createAsyncThunk('auth/checkAuth', async (_, thunkAPI) => {
   try {
-    const response = await axios.get('http://localhost:8000/auth/refresh', {
+    const response = await axios.get(`${getConfig().productionServer}/auth/refresh`, {
       withCredentials: true,
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
