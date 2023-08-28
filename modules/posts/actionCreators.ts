@@ -9,6 +9,7 @@ export const PostsPublicAction = {
 export const PostsReducerAction = {
   setPosts: (payload: any) => createAction(PostsActionsType.SET_POSTS, payload),
   setLoadingState: (payload: PostsLoadingState) => createAction(PostsActionsType.SET_LOADING_STATE, payload),
+  setError: (payload) => createAction(PostsActionsType.SET_ERROR, payload),
 };
 
 export type PostActionUnion = ActionsUnion<typeof PostsReducerAction>;

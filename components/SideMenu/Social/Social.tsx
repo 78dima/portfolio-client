@@ -1,4 +1,4 @@
-import { faDribbble, faFacebook, faLinkedin, faReddit, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle, faLinkedin, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
@@ -8,28 +8,18 @@ const Social: React.FC = () => (
   <div className={styles.social}>
     <ul className={styles.socialIcons}>
       <li>
-        <a href="#anchor1">
-          <FontAwesomeIcon icon={faFacebook} />
-        </a>
-      </li>
-      <li>
-        <a href="#anchor2">
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-      </li>
-      <li>
-        <a href="#anchor3">
-          <FontAwesomeIcon icon={faDribbble} />
-        </a>
-      </li>
-      <li>
-        <a href="#anchor4">
+        <a href="http://www.linkedin.com/in/78dima">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </li>
       <li>
-        <a href="#anchor5">
-          <FontAwesomeIcon icon={faReddit} />
+        <a href="https://t.me/libarate_78">
+          <FontAwesomeIcon icon={faTelegram} />
+        </a>
+      </li>
+      <li>
+        <a href="mailto:7878dima7878@gmail.com">
+          <FontAwesomeIcon icon={faGoogle} />
         </a>
       </li>
     </ul>

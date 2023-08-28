@@ -1,21 +1,35 @@
-import { Draft, produce } from 'immer';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { PostActionUnion } from './actionCreators';
-import { PostsActionsType } from './actionTypes';
-import { PostsLoadingState, PostState } from './contracts/state';
+import { POSTS_MODULE_NAME } from '.';
+import { getPosts } from './action';
+import { Posts, PostsLoadingState, PostState } from './contracts/state';
 
 const initialState: PostState = {
   posts: [],
   loadingState: PostsLoadingState.NEVER,
 };
-export const postReducer = produce((draft: Draft<PostState>, action: PostActionUnion) => {
-  // eslint-disable-next-line default-case
-  switch (action.type) {
-    case PostsActionsType.SET_POSTS:
-      draft.posts = action.payload;
-      break;
-    case PostsActionsType.SET_LOADING_STATE:
-      draft.loadingState = action.payload;
-      break;
-  }
-}, initialState);
+export const postReducer = createSlice({
+  name: POSTS_MODULE_NAME,
+  initialState,
+  reducers: {
+    setDataPost: (state, action) => {
+      state.posts = action.payload;
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getPosts.fulfilled, (state: PostState, action: PayloadAction<Posts[], string>) => {
+        state.posts = action.payload;
+        state.loadingState = PostsLoadingState.LOADED;
+      })
+      .addCase(getPosts.pending, (state: PostState) => {
+        state.loadingState = PostsLoadingState.LOADING;
+      })
+      .addCase(getPosts.rejected, (state: PostState, action: PayloadAction<any>) => {
+        state.error = action.payload;
+        state.loadingState = PostsLoadingState.LOADED;
+      });
+  },
+});
+export const { setDataPost } = postReducer.actions;
+export default postReducer.reducer;

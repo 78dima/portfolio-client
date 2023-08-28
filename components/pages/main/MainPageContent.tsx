@@ -15,28 +15,28 @@ const MainPageContent: React.FC = () => (
       <SectionLayout id="about">
         <SectionInfo
           title="About Me"
-          descr="Hello! My name is Dumitru Romanenco. I'm a web developer, let's get acquainted! My work experience:"
+          descr="Hello! My name is Dumitru Romanenco. I'm a web developer, let's get acquainted! As a front-end developer with 6 years of experience, I have a proven track record of creating beautiful, responsive, and user-friendly websites that engage users and drive business results. My experience:"
         />
         <Posts />
       </SectionLayout>
       <SectionLayout id="goods">
         <SectionInfo
           title="What I’m good at?"
-          descr="Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor. Vestibulum congue leo et tellus aliquam, eu viverra nulla semper. Nullam eu faucibus diam. Donec eget massa ante."
+          descr="My expertise lies in developing modern, cross-browser compatible web applications using the latest front-end technologies such as:"
         />
         <Skills />
       </SectionLayout>
       <SectionLayout id="works">
         <SectionInfo
-          title="My Work"
-          descr="Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit amet. Duis ac elit vulputate, lobortis arcu quis, vehicula mauris."
+          title="My Works"
+          descr="Welcome to my portfolio showcasing a collection of projects I've worked on as a front-end developer. I take pride in crafting engaging and user-centric web experiences that combine creativity with cutting-edge technologies. Below, you'll find a glimpse of some of my notable projects:"
         />
         <MyWork />
       </SectionLayout>
       <SectionLayout id="contact">
         <SectionInfo
           title="Contact Me"
-          descr="Fusce eget nibh nec justo interdum condimentum. Morbi justo ex, efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          descr="I'm thrilled to connect with you! Whether you have a project idea, a question, or simply want to say hello, feel free to reach out using the contact form below. I'm always excited to hear from fellow developers, collaborators, and potential clients."
         />
         <ContactMe />
       </SectionLayout>

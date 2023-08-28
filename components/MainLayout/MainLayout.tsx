@@ -6,10 +6,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-const MainLayout: React.FC<Props> = ({ children }) => (
-  <div id={styles.pageWrapper}>
-    <main>{children}</main>
-  </div>
-);
+const MainLayout: React.FC<Props> = ({ children }) => <main id={styles.pageWrapper}>{children}</main>;
 
 export default MainLayout;

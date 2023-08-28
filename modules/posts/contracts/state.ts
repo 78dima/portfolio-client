@@ -1,16 +1,18 @@
-import { Immutable } from 'immer';
-
 import { POSTS_MODULE_NAME } from '../index';
 
-export type PostState = Immutable<{
+export type PostState = {
   posts: Posts[];
   loadingState: PostsLoadingState;
-}>;
+  error?: string;
+};
 
-type Posts = {
+export type Posts = {
+  id: number;
   title: string;
-  content: string;
-  image: string;
+  years: string;
+  site: string;
+  text: string;
+  stacking: string[];
 };
 
 export interface PostAwareState {

@@ -1,25 +1,16 @@
-import { HYDRATE } from 'next-redux-wrapper';
 import { combineReducers } from 'redux';
 
-import { POSTS_MODULE_NAME } from '@/modules/posts';
-import { postReducer } from '@/modules/posts/reducer';
+import { AUTH_MODULE_NAME } from '@/modules/auth';
+import authReducer from '@/modules/auth/reducer';
+import { contactMeAPI } from '@/modules/contactMe/service';
+import { myWorksAPI } from '@/modules/myWorks/service';
+import { postAPI } from '@/modules/posts/service';
+import { skillsAPI } from '@/modules/skills/service';
 
-const rootReducer = combineReducers({
-  [POSTS_MODULE_NAME]: postReducer,
+export const rootReducer = combineReducers({
+  [postAPI.reducerPath]: postAPI.reducer,
+  [skillsAPI.reducerPath]: skillsAPI.reducer,
+  [myWorksAPI.reducerPath]: myWorksAPI.reducer,
+  [contactMeAPI.reducerPath]: contactMeAPI.reducer,
+  [AUTH_MODULE_NAME]: authReducer,
 });
-
-export const reducer = (state, action) => {
-  if (action.type === HYDRATE) {
-    const nextState = {
-      ...state, // use previous state
-      ...action.payload, // apply delta from hydration
-    };
-    if (state.count) {
-      nextState.count = state.count;
-    } // preserve count value on client side navigation
-    return nextState;
-  }
-  return rootReducer(state, action);
-};
-
-export type RootState = ReturnType<typeof rootReducer>;

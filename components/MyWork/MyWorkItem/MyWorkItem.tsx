@@ -12,7 +12,7 @@ interface Props {
 const MyWorkItem: React.FC<Props> = ({ title, link, imageSrc }) => (
   <div className={styles.myWorkItem}>
     <figure>
-      <Image src={imageSrc} alt="" layout="fill" objectFit="cover" />
+      <Image src={`/${imageSrc}`} alt={title} layout="fill" objectFit="cover" />
       <figcaption>
         <h4>{title}</h4>
         <a href={link}>Link</a>
@@ -21,4 +21,4 @@ const MyWorkItem: React.FC<Props> = ({ title, link, imageSrc }) => (
   </div>
 );
 
-export default MyWorkItem;
+export default React.memo(MyWorkItem);

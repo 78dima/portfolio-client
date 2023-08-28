@@ -1,14 +1,16 @@
-import { composeWithDevTools } from '@redux-devtools/extension';
-import { createWrapper } from 'next-redux-wrapper';
-import { AnyAction, applyMiddleware, legacy_createStore as createStore, Store } from 'redux';
-import thunk, { ThunkDispatch } from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit';
 
-import { reducer, RootState } from './reducers/index';
+import { APIQueries } from '@/store/api/api';
 
-// create a makeStore function
-const makeStore = () => createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
+import { rootReducer } from './reducers/index';
 
-// export an assembled wrapper
-export const wrapper = createWrapper<Store<RootState>>(makeStore, { debug: true });
+export const setupStore = () =>
+  configureStore({
+    reducer: rootReducer,
+    devTools: process.env.NODE_ENV !== 'production',
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(...APIQueries),
+  });
 
-export type NextThunkDispatch = ThunkDispatch<RootState, void, AnyAction>;
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore['dispatch'];
