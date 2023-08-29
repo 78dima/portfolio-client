@@ -134,7 +134,6 @@ const ContactMe = () => {
           </>
         )}
       </Modal>
-      )
     </div>
   );
 };
