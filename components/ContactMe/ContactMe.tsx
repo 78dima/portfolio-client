@@ -16,7 +16,7 @@ const ContactMe = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [sendMessage, { isError, isSuccess, isLoading,  }] = contactMeAPI.useSendMessageMutation();
+  const [sendMessage, { isError, isSuccess, isLoading }] = contactMeAPI.useSendMessageMutation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const onSubmit = (data) => {
     sendMessage(data);

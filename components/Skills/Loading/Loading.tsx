@@ -1,5 +1,6 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
+import uuid from "react-uuid";
 
 const Loading = (props) => {
   const rows = 2;
@@ -25,10 +26,11 @@ const Loading = (props) => {
     >
       <rect x="0" y="0" rx="0" ry="0" width={columns * coverWidthWithPadding - padding} height="20" />
 
+      {/* eslint-disable-next-line @typescript-eslint/naming-convention */}
       {covers.map((_, i) => {
         const vy = Math.floor(i / columns) * coverHeightWithPadding + initial;
         const vx = (i * coverWidthWithPadding) % (columns * coverWidthWithPadding);
-        return <rect key={i} x={vx} y={vy} rx="0" ry="0" width={coverWidth} height={coverHeight} />;
+        return <rect key={uuid()} x={vx} y={vy} rx="0" ry="0" width={coverWidth} height={coverHeight} />;
       })}
     </ContentLoader>
   );
