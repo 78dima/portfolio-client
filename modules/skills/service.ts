@@ -1,11 +1,12 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
+import getConfig from '@/config/default';
 import { Data } from '@/modules/skills/contracts/state';
 import { SKILLS_MODULE_NAME } from '@/modules/skills/index';
 
 export const skillsAPI = createApi({
   reducerPath: SKILLS_MODULE_NAME,
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8000', mode: 'cors' }),
+  baseQuery: fetchBaseQuery({ baseUrl: getConfig().productionServer, mode: 'cors' }),
   endpoints: (build) => ({
     fetchAllSkills: build.query<Data[], null>({
       query: () => ({
