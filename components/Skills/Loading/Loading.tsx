@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
-import uuid from "react-uuid";
+import uuid from 'react-uuid';
 
 const Loading = (props) => {
   const rows = 2;
