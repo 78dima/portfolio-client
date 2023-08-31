@@ -44,6 +44,7 @@ const ContactMe = () => {
                 id="name"
                 placeholder="Your name..."
                 className={styles.formInput}
+                autoComplete="off"
                 required
                 {...register('name', {
                   required: true,
@@ -67,6 +68,7 @@ const ContactMe = () => {
                 id="email"
                 placeholder="Your email..."
                 className={styles.formInput}
+                autoComplete="off"
                 required
                 {...register('email', {
                   required: true,
@@ -89,6 +91,7 @@ const ContactMe = () => {
                 id="subject"
                 placeholder="Subject..."
                 className={styles.formInput}
+                autoComplete="off"
                 {...register('subject')}
               />
             </fieldset>
@@ -99,6 +102,7 @@ const ContactMe = () => {
                 rows={4}
                 id="message"
                 placeholder="Your message..."
+                autoComplete="off"
                 {...register('message', {
                   required: true,
                   validate: {
