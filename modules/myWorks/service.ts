@@ -6,7 +6,7 @@ import { MY_WORKS_MODULE_NAME } from '@/modules/myWorks/index';
 
 export const myWorksAPI = createApi({
   reducerPath: MY_WORKS_MODULE_NAME,
-  baseQuery: fetchBaseQuery({ baseUrl: getConfig().productionServer, mode: 'cors' }),
+  baseQuery: fetchBaseQuery({ baseUrl: getConfig().productionServer }),
   endpoints: (build) => ({
     fetchAllWorks: build.query<Data[], null>({
       query: () => ({

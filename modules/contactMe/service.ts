@@ -5,7 +5,7 @@ import { CONTACT_ME_MODULE_NAME } from '@/modules/contactMe/index';
 
 export const contactMeAPI = createApi({
   reducerPath: CONTACT_ME_MODULE_NAME,
-  baseQuery: fetchBaseQuery({ baseUrl: getConfig().productionServer, mode: 'cors' }),
+  baseQuery: fetchBaseQuery({ baseUrl: getConfig().productionServer }),
   endpoints: (build) => ({
     fetchMessages: build.query({
       query: () => ({
