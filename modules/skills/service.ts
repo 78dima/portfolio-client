@@ -12,6 +12,7 @@ export const skillsAPI = createApi({
       query: () => ({
         url: '/skills',
         method: 'GET',
+        headers: { 'Access-Control-Allow-Origin': '*' },
       }),
     }),
   }),
