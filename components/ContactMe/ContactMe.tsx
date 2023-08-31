@@ -13,6 +13,7 @@ import styles from './ContactMe.module.scss';
 const ContactMe = () => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -21,6 +22,7 @@ const ContactMe = () => {
   const onSubmit = (data) => {
     sendMessage(data);
     setIsModalOpen(true);
+    reset();
   };
 
   const onCloseEvent = () => {
