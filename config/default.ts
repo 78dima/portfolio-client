@@ -1,6 +1,6 @@
 const getConfig = () => ({
   port: 3000,
-  productionServer: 'http://localhost:8000/api',
+  productionServer: 'https://www.api.78dima.com/api',
 });
 
 export default getConfig;
