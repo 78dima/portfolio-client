@@ -17,7 +17,6 @@ export const contactMeAPI = createApi({
       query: (payload) => ({
         url: '/contact-me',
         method: 'POST',
-        credentials: 'include',
         body: payload,
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
