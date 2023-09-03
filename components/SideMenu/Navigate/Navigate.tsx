@@ -18,7 +18,7 @@ const Navigate: React.FC = () => (
       </li>
       <li>
         <Link activeClass={styles.active} to="works" spy smooth offset={-50} duration={500}>
-          My works
+          My work
         </Link>
       </li>
       <li>

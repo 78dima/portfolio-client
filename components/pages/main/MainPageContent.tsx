@@ -15,7 +15,7 @@ const MainPageContent: React.FC = () => (
       <SectionLayout id="about">
         <SectionInfo
           title="About Me"
-          descr="Hello! My name is Dumitru Romanenco. I'm a web developer, let's get acquainted! As a front-end developer with 6 years of experience, I have a proven track record of creating beautiful, responsive, and user-friendly websites that engage users and drive business results. My experience:"
+          descr="Hello! My name is Dumitru Romanenco. I'm a web developer, let's get acquainted! As a front-end developer with 6 years of experience, I have a proven track record of creating beautiful, responsive, and user-friendly websites that engage users and drive business results. I love programming and my key strength is ability to rapidly learn anything that required to get the job done. I can work on any OS using any IDE or text editor. When I have task the only question is time. My experience:"
         />
         <Posts />
       </SectionLayout>
@@ -28,7 +28,7 @@ const MainPageContent: React.FC = () => (
       </SectionLayout>
       <SectionLayout id="works">
         <SectionInfo
-          title="My Works"
+          title="My Work"
           descr="Welcome to my portfolio showcasing a collection of projects I've worked on as a front-end developer. I take pride in crafting engaging and user-centric web experiences that combine creativity with cutting-edge technologies. Below, you'll find a glimpse of some of my notable projects:"
         />
         <MyWork />
