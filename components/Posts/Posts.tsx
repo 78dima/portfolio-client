@@ -16,16 +16,18 @@ const Posts = () => {
   return (
     <div className={styles.posts}>
       {data &&
-        data.map((item) => (
-          <PostItem
-            key={item.id}
-            years={item.years}
-            site={item.site}
-            title={item.title}
-            text={item.text}
-            stacking={item.stacking}
-          />
-        ))}
+        [...data]
+          .sort((a, b) => a.id - b.id)
+          .map((item) => (
+            <PostItem
+              key={item.id}
+              years={item.years}
+              site={item.site}
+              title={item.title}
+              text={item.text}
+              stacking={item.stacking}
+            />
+          ))}
     </div>
   );
 };

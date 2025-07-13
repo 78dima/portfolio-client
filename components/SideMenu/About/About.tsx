@@ -1,6 +1,6 @@
+import authorImg from 'public/about-photo2.png';
 import React from 'react';
 
-import authorImg from '../assets/about-photo.jpg';
 import styles from './About.module.scss';
 
 const About: React.FC = () => (

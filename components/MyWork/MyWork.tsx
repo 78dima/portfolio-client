@@ -19,8 +19,9 @@ const MyWork = () => {
     if (!data) {
       return [];
     }
+    const sortedData = [...data].sort((a, b) => a.id - b.id);
 
-    return showData ? data : data.slice(0, 6);
+    return showData ? sortedData : sortedData.slice(0, 6);
   }, [data, showData]);
 
   if (isLoading) {
@@ -33,7 +34,7 @@ const MyWork = () => {
         {data &&
           dispayedItems.map((i) => <MyWorkItem key={i.id} title={i.title} link={i.link} imageSrc={i.imageSrc} />)}
       </div>
-      {!showData && (
+      {!showData && data && data.length > 6 && (
         <div className={styles.buttonWrapper}>
           <Button type="button" onClick={onShowEvent}>
             Show more

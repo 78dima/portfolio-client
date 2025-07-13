@@ -19,7 +19,7 @@ const PostItem: React.FC<Props> = ({ title, text, site, years, stacking }) => (
       <div className={styles.postContentSite}>
         <a href={site}>{site}</a>
       </div>
-      <div className={styles.postContentText}>{text}</div>
+      <div className={styles.postContentText} dangerouslySetInnerHTML={{ __html: text }} />
       <div className={styles.postSkills}>
         {stacking.map((item) => (
           <div key={uuid()} className={styles.postSkillsItem}>
